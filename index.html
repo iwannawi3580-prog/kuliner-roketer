@@ -73,8 +73,9 @@
     </header>
 
     <!-- HERO SECTION -->
-<section class="relative bg-cream bg-pattern overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-24 lg:pt-28 lg:pb-32">
+<!-- HERO SECTION FULL BLEED -->
+<section class="relative bg-cream overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-24 lg:pt-28 lg:pb-32 relative z-10">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <!-- KIRI: TEXT -->
             <div class="relative z-10">
@@ -85,48 +86,42 @@
                 <p class="text-lg text-slate-600 mb-8 max-w-md">
                     Dibuat dengan bahan segar pilihan dan resep rumahan penuh cinta. Nikmati kelezatan seperti masakan Ibu, setiap hari.
                 </p>
-
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10 max-w-lg">
-                    <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                    <div class="bg-white/90 backdrop-blur p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
                         <i class="fa-solid fa-leaf text-brand-500 text-lg mb-1"></i>
                         <h4 class="font-semibold text-xs text-coklat leading-tight">Bahan Segar Pilihan</h4>
                     </div>
-                    <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                    <div class="bg-white/90 backdrop-blur p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
                         <i class="fa-solid fa-shield-halved text-brand-500 text-lg mb-1"></i>
                         <h4 class="font-semibold text-xs text-coklat leading-tight">Tanpa Pengawet & MSG</h4>
                     </div>
-                    <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                    <div class="bg-white/90 backdrop-blur p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
                         <i class="fa-solid fa-kitchen-set text-brand-500 text-lg mb-1"></i>
                         <h4 class="font-semibold text-xs text-coklat leading-tight">Dimasak Setiap Hari</h4>
                     </div>
-                    <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                    <div class="bg-white/90 backdrop-blur p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
                         <i class="fa-solid fa-truck-fast text-brand-500 text-lg mb-1"></i>
                         <h4 class="font-semibold text-xs text-coklat leading-tight">Pengiriman Cepat & Aman</h4>
                     </div>
-                </div>
-
                 <div class="flex flex-wrap gap-4">
                     <a href="https://wa.me/6281234567890?text=Halo%20Dapur%20Bunda%2C%20saya%20mau%20order" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 transition">
                         <i class="fa-brands fa-whatsapp text-lg"></i> Order via WhatsApp
                     </a>
-                    <a href="#menu" class="bg-white hover:bg-orange-50 text-coklat font-bold px-6 py-3 rounded-full flex items-center gap-2 transition border border-orange-200">
+                    <a href="#menu" class="bg-white/90 backdrop-blur hover:bg-orange-50 text-coklat font-bold px-6 py-3 rounded-full flex items-center gap-2 transition border border-orange-200">
                         Lihat Menu <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- KANAN: GAMBAR NEMBUS -->
-            <div class="relative lg:h-[600px] flex items-center justify-end">
+    <!-- GAMBAR BACKGROUND NEMBUS -->
     <img src="/images/hero-kuliner-bg.webp"
-         alt="Nasi Ayam Goreng Dapur Bunda"
-         class="lg:absolute lg:-left-40 lg:top-1/2 lg:-translate-y-1/2
-                w-full lg:w-[900px] xl:w-[1000px]
-                h-auto
-                object-cover object-left
-                scale-110 lg:scale-125
-                drop-shadow-2xl">
+         alt="Nasi Ayam Goreng"
+         class="absolute top-0 right-0 w-full lg:w-[65%] h-full object-cover object-left">
 
-    <div class="absolute bottom-4 right-4 lg:bottom-12 lg:right-0 bg-white rounded-2xl p-4 shadow-xl flex items-center gap-3 z-20">
+    <!-- BADGE 1000+ -->
+    <div class="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 bg-white rounded-2xl p-4 shadow-xl flex items-center gap-3 z-20">
         <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
             <i class="fa-solid fa-heart text-red-500 text-xl"></i>
         </div>
@@ -135,7 +130,6 @@
             <p class="text-xs text-slate-500">Pelanggan Puas</p>
         </div>
     </div>
-</div>
 </section>
 
     <!-- MENU FAVORIT -->
