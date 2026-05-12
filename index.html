@@ -73,12 +73,12 @@
     </header>
 
     <!-- HERO SECTION -->
-<!-- HERO SECTION FULL BLEED -->
+<!-- HERO SECTION PAS BANGET -->
 <section class="relative bg-cream overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-24 lg:pt-28 lg:pb-32 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <!-- KIRI: TEXT -->
-            <div class="relative z-10">
+        <div class="grid lg:grid-cols-5 gap-8 items-center">
+            <!-- KIRI: TEXT 60% -->
+            <div class="lg:col-span-3 relative z-10">
                 <h2 class="font-serif text-5xl lg:text-7xl font-bold mb-4 leading-tight">
                     <span class="italic text-brand-600">Masakan Rumahan,</span><br>
                     <span class="text-coklat">Rasa Istimewa</span>
@@ -103,6 +103,7 @@
                         <i class="fa-solid fa-truck-fast text-brand-500 text-lg mb-1"></i>
                         <h4 class="font-semibold text-xs text-coklat leading-tight">Pengiriman Cepat & Aman</h4>
                     </div>
+                </div>
                 <div class="flex flex-wrap gap-4">
                     <a href="https://wa.me/6281234567890?text=Halo%20Dapur%20Bunda%2C%20saya%20mau%20order" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 transition">
                         <i class="fa-brands fa-whatsapp text-lg"></i> Order via WhatsApp
@@ -115,10 +116,12 @@
         </div>
     </div>
 
-    <!-- GAMBAR BACKGROUND NEMBUS -->
-    <img src="/images/hero-kuliner-bg.webp"
-         alt="Nasi Ayam Goreng"
-         class="absolute top-0 right-0 w-full lg:w-[65%] h-full object-cover object-left">
+    <!-- GAMBAR 40% KANAN, FOKUS PIRING -->
+    <div class="hidden lg:block absolute top-0 right-0 w-[45%] h-full">
+        <img src="/images/hero kuliner-bg.webp"
+             alt="Nasi Ayam Goreng"
+             class="w-full h-full object-cover object-center">
+    </div>
 
     <!-- BADGE 1000+ -->
     <div class="absolute bottom-8 right-8 lg:bottom-16 lg:right-16 bg-white rounded-2xl p-4 shadow-xl flex items-center gap-3 z-20">
@@ -130,8 +133,12 @@
             <p class="text-xs text-slate-500">Pelanggan Puas</p>
         </div>
     </div>
-</section>
 
+    <!-- GAMBAR HP: BLOK BIASA -->
+    <div class="lg:hidden mt-8 px-6">
+        <img src="/images/hero kuliner-bg.webp" alt="Nasi Ayam Goreng" class="w-full rounded-2xl shadow-xl">
+    </div>
+</section>
     <!-- MENU FAVORIT -->
     <section id="menu" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
