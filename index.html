@@ -1,3 +1,427 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Bunda - Masakan Rumahan, Rasa Istimewa</title>
+    <meta name="description" content="Masakan rumahan tanpa pengawet & MSG. Bahan segar pilihan, dimasak setiap hari. Order via WhatsApp, antar cepat & aman.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand': { 50: '#fff8f1', 100: '#feecdc', 200: '#fcd9bd', 300: '#fdba8c', 400: '#ff8a4c', 500: '#ff5a1f', 600: '#d03801', 700: '#b43403', 800: '#8a2c0d', 900: '#73230d'},
+                        'cream': '#FFFBF5', 'coklat': '#4A2C2A'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+       .bg-pattern { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d03801' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
+       .cart-badge { animation: bounce 0.3s; }
+       @keyframes bounce { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+    </style>
+</head>
+<body class="bg-cream font-sans text-coklat">
+
+    <!-- HEADER -->
+    <header class="bg-cream/80 backdrop-blur-lg sticky top-0 z-50 border-b border-orange-100">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-house-chimney text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-coklat leading-none">Dapur Bunda</h1>
+                        <p class="text-xs text-brand-600">Masakan Rumahan, Rasa Istimewa</p>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#" class="text-brand-600 font-semibold border-b-2 border-brand-600 pb-1 whitespace-nowrap">Beranda</a>
+                    <a href="#menu" class="text-slate-600 hover:text-coklat whitespace-nowrap">Menu</a>
+                    <a href="#paket" class="text-slate-600 hover:text-coklat whitespace-nowrap">Paket Hemat</a>
+                    <a href="#testimoni" class="text-slate-600 hover:text-coklat whitespace-nowrap">Testimoni</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-coklat whitespace-nowrap">Tentang Kami</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleCart()" class="relative bg-brand-500 hover:bg-brand-600 text-white w-12 h-12 rounded-full flex items-center justify-center transition">
+                        <i class="fa-solid fa-shopping-basket text-lg"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-green-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold hidden">0</span>
+                    </button>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Dapur%20Bunda%2C%20saya%20mau%20order" target="_blank" class="hidden lg:flex bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2.5 rounded-full items-center gap-2 transition whitespace-nowrap">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-cream bg-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-24 lg:pt-24 lg:pb-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-serif text-5xl lg:text-7xl font-bold mb-4 leading-tight">
+                        <span class="italic text-brand-600">Masakan Rumahan,</span><br>
+                        <span class="text-coklat">Rasa Istimewa</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-8 max-w-lg">
+                        Dibuat dengan bahan segar pilihan dan resep rumahan penuh cinta. Nikmati kelezatan seperti masakan Ibu, setiap hari.
+                    </p>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-leaf text-brand-500 text-xl mb-2"></i>
+                            <h4 class="font-semibold text-xs text-coklat">Bahan Segar Pilihan</h4>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-shield-halved text-brand-500 text-xl mb-2"></i>
+                            <h4 class="font-semibold text-xs text-coklat">Tanpa Pengawet & MSG</h4>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-kitchen-set text-brand-500 text-xl mb-2"></i>
+                            <h4 class="font-semibold text-xs text-coklat">Dimasak Setiap Hari</h4>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl shadow-sm border border-orange-100 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-truck-fast text-brand-500 text-xl mb-2"></i>
+                            <h4 class="font-semibold text-xs text-coklat">Pengiriman Cepat & Aman</h4>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#menu" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-full flex items-center gap-2 transition">
+                            <i class="fa-solid fa-utensils"></i> Pesan Sekarang
+                        </a>
+                        <a href="#menu" class="bg-white hover:bg-orange-50 text-coklat font-bold px-6 py-3 rounded-full flex items-center gap-2 transition border border-orange-200">
+                            Lihat Menu <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://placehold.co/800x800/d03801/ffffff?text=Nasi+Ayam+Lengkuas" alt="Nasi Ayam Goreng Lengkuas" class="relative rounded-3xl shadow-2xl w-full aspect-square object-cover">
+                    <div class="absolute -bottom-5 -left-5 bg-white rounded-2xl p-4 shadow-xl flex items-center gap-3">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-heart text-red-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-extrabold text-2xl text-coklat leading-none">1000+</p>
+                            <p class="text-xs text-slate-500">Pelanggan Puas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU FAVORIT -->
+    <section id="menu" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-brand-600 font-semibold mb-2 text-sm tracking-widest">MENU FAVORIT</p>
+                <h3 class="text-3xl lg:text-5xl font-extrabold text-coklat mb-4">Pilihan Menu Lezat</h3>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Berbagai pilihan menu rumahan yang siap memanjakan lidah Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+                <!-- Menu 1 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x600/8a2c0d/ffffff?text=Ayam+Goreng" alt="Ayam Goreng" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-coklat mb-1">Ayam Goreng Lengkuas</h4>
+                        <p class="text-sm text-slate-500 mb-3">Ayam kampung goreng dengan bumbu lengkuas khas rumahan.</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-extrabold text-brand-600">Rp25.000</p>
+                            <button onclick="addToCart('Ayam Goreng Lengkuas', 25000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu 2 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x600/73230d/ffffff?text=Rendang" alt="Rendang" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-coklat mb-1">Rendang Daging Sapi</h4>
+                        <p class="text-sm text-slate-500 mb-3">Rendang daging sapi empuk dengan bumbu rempah pilihan.</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-extrabold text-brand-600">Rp28.000</p>
+                            <button onclick="addToCart('Rendang Daging Sapi', 28000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu 3 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x600/4A2C2A/ffffff?text=Tumis+Sayur" alt="Tumis Sayur" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-coklat mb-1">Tumis Sayur Sehat</h4>
+                        <p class="text-sm text-slate-500 mb-3">Tumis sayuran segar pilihan yang sehat dan lezat.</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-extrabold text-brand-600">Rp15.000</p>
+                            <button onclick="addToCart('Tumis Sayur Sehat', 15000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu 4 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x600/b43403/ffffff?text=Sambal+Terasi" alt="Sambal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-coklat mb-1">Sambal Terasi Rumahan</h4>
+                        <p class="text-sm text-slate-500 mb-3">Sambal terasi pedas gurih, dibuat setiap hari.</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-extrabold text-brand-600">Rp10.000</p>
+                            <button onclick="addToCart('Sambal Terasi Rumahan', 10000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu 5 -->
+                <div class="bg-cream rounded-2xl overflow-hidden border border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x600/ff8a4c/ffffff?text=Sayur+Asem" alt="Sayur Asem" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-lg text-coklat mb-1">Sayur Asem Segar</h4>
+                        <p class="text-sm text-slate-500 mb-3">Sayur asem segar dengan rasa segar dan nikmat.</p>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-extrabold text-brand-600">Rp15.000</p>
+                            <button onclick="addToCart('Sayur Asem Segar', 15000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAKET HEMAT -->
+    <section id="paket" class="py-20 lg:py-28 bg-cream bg-pattern">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 lg:p-12 border border-orange-100">
+                <div class="grid lg:grid-cols-4 gap-8 items-center">
+                    <div>
+                        <p class="text-brand-600 font-semibold mb-2 text-sm tracking-widest">PAKET HEMAT</p>
+                        <h3 class="text-3xl lg:text-4xl font-extrabold text-coklat mb-4">Lebih Hemat, Lebih Kenyang!</h3>
+                        <p class="text-slate-600 mb-6">Paket lengkap dengan harga lebih hemat, cocok untuk makan sendiri, keluarga, atau acara spesial.</p>
+                        <ul class="space-y-3 text-sm text-coklat mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> Harga Lebih Hemat</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> Porsi Lebih Banyak</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> Bisa Request Menu</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-600"></i> Cocok untuk Keluarga</li>
+                        </ul>
+                    </div>
+
+                    <!-- Paket 1 -->
+                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-lg">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="https://placehold.co/600x400/ff8a4c/ffffff?text=Paket+1" alt="Paket 1" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 10%</span>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-coklat">Paket Hemat 1</h4>
+                            <p class="text-xs text-slate-500 mb-2">Untuk 2-3 Orang</p>
+                            <p class="text-2xl font-extrabold text-brand-600 mb-1">Rp75.000 <span class="text-sm font-normal text-slate-400 line-through">Rp85.000</span></p>
+                            <button onclick="addToCart('Paket Hemat 1 (2-3 Orang)', 75000)" class="w-full mt-3 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
+                                + Tambah Keranjang
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paket 2 -->
+                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-lg">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="https://placehold.co/600x400/d03801/ffffff?text=Paket+2" alt="Paket 2" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 15%</span>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-coklat">Paket Hemat 2</h4>
+                            <p class="text-xs text-slate-500 mb-2">Untuk 4-5 Orang</p>
+                            <p class="text-2xl font-extrabold text-brand-600 mb-1">Rp135.000 <span class="text-sm font-normal text-slate-400 line-through">Rp160.000</span></p>
+                            <button onclick="addToCart('Paket Hemat 2 (4-5 Orang)', 135000)" class="w-full mt-3 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
+                                + Tambah Keranjang
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paket 3 -->
+                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-lg">
+                        <div class="relative h-40 overflow-hidden">
+                            <img src="https://placehold.co/600x400/4A2C2A/ffffff?text=Paket+3" alt="Paket 3" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 20%</span>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-lg text-coklat">Paket Hemat 3</h4>
+                            <p class="text-xs text-slate-500 mb-2">Untuk 6-8 Orang</p>
+                            <p class="text-2xl font-extrabold text-brand-600 mb-1">Rp250.000 <span class="text-sm font-normal text-slate-400 line-through">Rp310.000</span></p>
+                            <button onclick="addToCart('Paket Hemat 3 (6-8 Orang)', 250000)" class="w-full mt-3 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
+                                + Tambah Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-brand-600 font-semibold mb-2 text-sm tracking-widest">TESTIMONI</p>
+                <h3 class="text-3xl lg:text-5xl font-extrabold text-coklat mb-4">Apa Kata Mereka?</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-cream p-6 rounded-2xl border border-orange-100">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-4 text-sm">Masakannya enak banget, rasanya seperti masakan Ibu sendiri. Porsi banyak dan harganya terjangkau!</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/40?img=5" class="w-10 h-10 rounded-full">
+                        <div>
+                            <h5 class="font-bold text-coklat text-sm">Linda W.</h5>
+                            <p class="text-xs text-slate-500">Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cream p-6 rounded-2xl border border-orange-100">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-4 text-sm">Bahan selalu segar dan tanpa pengawet, aman untuk keluarga. Anak-anak juga suka semua menunya!</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/40?img=8" class="w-10 h-10 rounded-full">
+                        <div>
+                            <h5 class="font-bold text-coklat text-sm">Rina M.</h5>
+                            <p class="text-xs text-slate-500">Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cream p-6 rounded-2xl border border-orange-100">
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 mb-4 text-sm">Pelayanan cepat, pengiriman selalu tepat waktu. Recommended banget!</p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://i.pravatar.cc/40?img=9" class="w-10 h-10 rounded-full">
+                        <div>
+                            <h5 class="font-bold text-coklat text-sm">Dewi S.</h5>
+                            <p class="text-xs text-slate-500">Pelanggan Setia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="tentang" class="bg-coklat text-slate-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-1">Pesan Mudah</h5>
+                        <p class="text-sm">Cukup chat via WhatsApp, pesanan langsung diproses.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-wallet text-brand-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-1">Pembayaran Fleksibel</h5>
+                        <p class="text-sm">Bisa COD atau transfer, aman & terpercaya.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-truck text-brand-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-1">Pengiriman Cepat</h5>
+                        <p class="text-sm">Diantar langsung ke rumah Anda setiap hari.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-shield-heart text-brand-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-1">Kepuasan Terjamin</h5>
+                        <p class="text-sm">Kepuasan Anda prioritas utama kami.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-sm">© 2026 Dapur Bunda. All rights reserved.</p>
+                <p class="text-xs mt-2">Made with ❤️ by Roketer</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART MODAL -->
+    <div id="cart-modal" class="fixed inset-0 bg-black/50 z-50 hidden" onclick="toggleCart()">
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl" onclick="event.stopPropagation()">
+            <div class="flex flex-col h-full">
+                <div class="p-6 border-b border-slate-200 flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-coklat">Keranjang Pesanan</h3>
+                    <button onclick="toggleCart()" class="w-8 h-8 rounded-full hover:bg-slate-100 flex items-center justify-center">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+                
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <p class="text-center text-slate-400 py-12">Keranjang masih kosong</p>
+                </div>
+                
+                <div class="border-t border-slate-200 p-6 bg-slate-50">
+                    <div class="flex justify-between mb-4">
+                        <span class="font-semibold text-slate-600">Total:</span>
+                        <span id="cart-total" class="text-2xl font-extrabold text-brand-600">Rp0</span>
+                    </div>
+                    <button onclick="checkoutWA()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-full flex items-center justify-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Checkout via WhatsApp
+                    </button>
+                    <button onclick="clearCart()" class="w-full mt-2 text-slate-500 hover:text-red-600 text-sm">Kosongkan Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <script>
     let cart = [];
     const WA_NUMBER = '6281234567890'; // GANTI NOMOR WA LO
