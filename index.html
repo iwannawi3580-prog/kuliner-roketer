@@ -148,95 +148,94 @@
             <p class="text-lg text-slate-600 max-w-2xl mx-auto">Berbagai pilihan menu rumahan yang siap memanjakan lidah Anda.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-            
-            <!-- Menu 1: Ayam Goreng -->
-            <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col">
-                <div class="relative h-48 overflow-hidden flex-shrink-0">
-                    <img src="/images/ayam goreng.webp" alt="Ayam Goreng Lengkuas" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-col flex-1">
-                    <h4 class="font-bold text-lg text-coklat mb-1">Ayam Goreng Lengkuas</h4>
-                    <p class="text-sm text-slate-500 mb-4 flex-1">Ayam kampung goreng dengan bumbu lengkuas khas rumahan.</p>
-                    <div class="flex justify-between items-center mt-auto">
-                        <p class="text-xl font-extrabold text-brand-600">Rp25.000</p>
-                        <button onclick="addToCart('Ayam Goreng Lengkuas', 25000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
+       <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12 items-stretch">
+    
+    <!-- Card 1: Ayam Goreng -->
+    <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col h-full">
+        <div class="relative h-48 overflow-hidden flex-shrink-0">
+            <img src="/images/ayam-goreng.webp" alt="Ayam Goreng Lengkuas" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5 flex-col flex-1">
+            <h4 class="font-bold text-lg text-coklat mb-1">Ayam Goreng Lengkuas</h4>
+            <p class="text-sm text-slate-500 mb-4 flex-1">Ayam kampung goreng dengan bumbu lengkuas khas rumahan.</p>
+            <div class="flex justify-between items-center mt-auto">
+                <p class="text-xl font-extrabold text-brand-600">Rp25.000</p>
+                <button onclick="addToCart('Ayam Goreng Lengkuas', 25000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
             </div>
-
-            <!-- Menu 2: Rendang -->
-            <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col">
-                <div class="relative h-48 overflow-hidden flex-shrink-0">
-                    <img src="/images/rendang.webp" alt="Rendang Daging Sapi" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-col flex-1">
-                    <h4 class="font-bold text-lg text-coklat mb-1">Rendang Daging Sapi</h4>
-                    <p class="text-sm text-slate-500 mb-4 flex-1">Rendang daging sapi empuk dengan bumbu rempah pilihan.</p>
-                    <div class="flex justify-between items-center mt-auto">
-                        <p class="text-xl font-extrabold text-brand-600">Rp28.000</p>
-                        <button onclick="addToCart('Rendang Daging Sapi', 28000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Menu 3: Tumis Sayur -->
-            <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col">
-                <div class="relative h-48 overflow-hidden flex-shrink-0">
-                    <img src="/images/tumis.webp" alt="Tumis Sayur Sehat" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-col flex-1">
-                    <h4 class="font-bold text-lg text-coklat mb-1">Tumis Sayur Sehat</h4>
-                    <p class="text-sm text-slate-500 mb-4 flex-1">Tumis sayuran segar pilihan yang sehat dan lezat.</p>
-                    <div class="flex justify-between items-center mt-auto">
-                        <p class="text-xl font-extrabold text-brand-600">Rp15.000</p>
-                        <button onclick="addToCart('Tumis Sayur Sehat', 15000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Menu 4: Sambel Terasi -->
-            <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col">
-                <div class="relative h-48 overflow-hidden flex-shrink-0">
-                    <img src="/images/sambel terasi.webp" alt="Sambal Terasi Rumahan" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-col flex-1">
-                    <h4 class="font-bold text-lg text-coklat mb-1">Sambal Terasi Rumahan</h4>
-                    <p class="text-sm text-slate-500 mb-4 flex-1">Sambal terasi pedas gurih, dibuat setiap hari.</p>
-                    <div class="flex justify-between items-center mt-auto">
-                        <p class="text-xl font-extrabold text-brand-600">Rp10.000</p>
-                        <button onclick="addToCart('Sambal Terasi Rumahan', 10000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Menu 5: Sayur Asem -->
-            <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col">
-                <div class="relative h-48 overflow-hidden flex-shrink-0">
-                    <img src="/images/sayur asem.webp" alt="Sayur Asem Segar" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-col flex-1">
-                    <h4 class="font-bold text-lg text-coklat mb-1">Sayur Asem Segar</h4>
-                    <p class="text-sm text-slate-500 mb-4 flex-1">Sayur asem segar dengan rasa segar dan nikmat.</p>
-                    <div class="flex justify-between items-center mt-auto">
-                        <p class="text-xl font-extrabold text-brand-600">Rp15.000</p>
-                        <button onclick="addToCart('Sayur Asem Segar', 15000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
+
+    <!-- Card 2: Rendang -->
+    <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col h-full">
+        <div class="relative h-48 overflow-hidden flex-shrink-0">
+            <img src="/images/rendang.webp" alt="Rendang Daging Sapi" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5 flex-col flex-1">
+            <h4 class="font-bold text-lg text-coklat mb-1">Rendang Daging Sapi</h4>
+            <p class="text-sm text-slate-500 mb-4 flex-1">Rendang daging sapi empuk dengan bumbu rempah pilihan.</p>
+            <div class="flex justify-between items-center mt-auto">
+                <p class="text-xl font-extrabold text-brand-600">Rp28.000</p>
+                <button onclick="addToCart('Rendang Daging Sapi', 28000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3: Tumis Sayur -->
+    <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col h-full">
+        <div class="relative h-48 overflow-hidden flex-shrink-0">
+            <img src="/images/tumis-sayur.webp" alt="Tumis Sayur Sehat" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5 flex-col flex-1">
+            <h4 class="font-bold text-lg text-coklat mb-1">Tumis Sayur Sehat</h4>
+            <p class="text-sm text-slate-500 mb-4 flex-1">Tumis sayuran segar pilihan yang sehat dan lezat.</p>
+            <div class="flex justify-between items-center mt-auto">
+                <p class="text-xl font-extrabold text-brand-600">Rp15.000</p>
+                <button onclick="addToCart('Tumis Sayur Sehat', 15000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4: Sambel Terasi -->
+    <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col h-full">
+        <div class="relative h-48 overflow-hidden flex-shrink-0">
+            <img src="/images/sambel-terasi.webp" alt="Sambal Terasi Rumahan" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5 flex-col flex-1">
+            <h4 class="font-bold text-lg text-coklat mb-1">Sambal Terasi Rumahan</h4>
+            <p class="text-sm text-slate-500 mb-4 flex-1">Sambal terasi pedas gurih, dibuat setiap hari.</p>
+            <div class="flex justify-between items-center mt-auto">
+                <p class="text-xl font-extrabold text-brand-600">Rp10.000</p>
+                <button onclick="addToCart('Sambal Terasi Rumahan', 10000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 5: Sayur Asem -->
+    <div class="bg-cream rounded-2xl overflow-hidden border-orange-100 hover:shadow-xl hover:-translate-y-1 transition-all flex-col h-full">
+        <div class="relative h-48 overflow-hidden flex-shrink-0">
+            <img src="/images/sayur-asem.webp" alt="Sayur Asem Segar" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5 flex-col flex-1">
+            <h4 class="font-bold text-lg text-coklat mb-1">Sayur Asem Segar</h4>
+            <p class="text-sm text-slate-500 mb-4 flex-1">Sayur asem segar dengan rasa segar dan nikmat.</p>
+            <div class="flex justify-between items-center mt-auto">
+                <p class="text-xl font-extrabold text-brand-600">Rp15.000</p>
+                <button onclick="addToCart('Sayur Asem Segar', 15000)" class="w-9 h-9 bg-brand-500 hover:bg-brand-600 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
 </section>
     <!-- PAKET HEMAT -->
     <section id="paket" class="py-20 lg:py-28 bg-cream bg-pattern">
