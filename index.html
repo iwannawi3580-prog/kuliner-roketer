@@ -242,7 +242,7 @@
     <section id="paket" class="pt-12 pb-20 bg-cream bg-pattern">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 lg:p-12 border border-orange-100">
-                <div class="grid lg:grid-cols-4 gap-8 items-center">
+                <div class="grid lg:grid-cols-4 gap-8 items-stretch">
                     <div>
                         <p class="text-brand-600 font-semibold mb-2 text-sm tracking-widest">PAKET HEMAT</p>
                         <h3 class="text-3xl lg:text-4xl font-extrabold text-coklat mb-4">Lebih Hemat, Lebih Kenyang!</h3>
@@ -256,56 +256,56 @@
                     </div>
 
                     <!-- Paket 1 -->
-                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-lg">
-                        <div class="relative h-40 overflow-hidden">
-                            <img src="/images/paket1.webp" alt="Paket Hemat 1" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 10%</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-lg text-coklat">Paket Hemat 1</h4>
-                            <p class="text-xs text-slate-500 mb-2">Untuk 2-3 Orang</p>
-                            <p class="text-2xl font-extrabold text-brand-600 mb-1">Rp75.000 <span class="text-sm font-normal text-slate-400 line-through">Rp85.000</span></p>
-                            <button onclick="addToCart('Paket Hemat 1 (2-3 Orang)', 75000)" class="w-full mt-3 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
-                                + Tambah Keranjang
-                            </button>
-                        </div>
-                    </div>
+<div class="bg-white rounded-2xl overflow-hidden border-orange-100 shadow-lg flex-col h-full">
+    <div class="relative h-40 overflow-hidden flex-shrink-0">
+        <img src="/images/paket1.webp" alt="Paket Hemat 1" class="w-full h-full object-cover">
+        <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 10%</span>
+    </div>
+    <div class="p-5 flex-col flex-1">
+        <h4 class="font-bold text-lg text-coklat">Paket Hemat 1</h4>
+        <p class="text-xs text-slate-500 mb-2">Untuk 2-3 Orang</p>
+        <p class="text-2xl font-extrabold text-brand-600 mb-1 flex-1">Rp75.000 <span class="text-sm font-normal text-slate-400 line-through">Rp85.000</span></p>
+        <button onclick="addToCart('Paket Hemat 1 (2-3 Orang)', 75000)" class="w-full mt-auto bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
+            + Tambah Keranjang
+        </button>
+    </div>
+</div>
 
-                    <!-- Paket 2 -->
-                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-lg">
-                        <div class="relative h-40 overflow-hidden">
-                            <img src="/images/paket2.webp" alt="Paket Hemat 2" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 15%</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-lg text-coklat">Paket Hemat 2</h4>
-                            <p class="text-xs text-slate-500 mb-2">Untuk 4-5 Orang</p>
-                            <p class="text-2xl font-extrabold text-brand-600 mb-1">Rp135.000 <span class="text-sm font-normal text-slate-400 line-through">Rp160.000</span></p>
-                            <button onclick="addToCart('Paket Hemat 2 (4-5 Orang)', 135000)" class="w-full mt-3 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
-                                + Tambah Keranjang
-                            </button>
-                        </div>
-                    </div>
+<!-- Paket 2 -->
+<div class="bg-white rounded-2xl overflow-hidden border-orange-100 shadow-lg flex-col h-full">
+    <div class="relative h-40 overflow-hidden flex-shrink-0">
+        <img src="/images/paket2.webp" alt="Paket Hemat 2" class="w-full h-full object-cover">
+        <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 15%</span>
+    </div>
+    <div class="p-5 flex-col flex-1">
+        <h4 class="font-bold text-lg text-coklat">Paket Hemat 2</h4>
+        <p class="text-xs text-slate-500 mb-2">Untuk 4-5 Orang</p>
+        <p class="text-2xl font-extrabold text-brand-600 mb-1 flex-1">Rp135.000 <span class="text-sm font-normal text-slate-400 line-through">Rp160.000</span></p>
+        <button onclick="addToCart('Paket Hemat 2 (4-5 Orang)', 135000)" class="w-full mt-auto bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
+            + Tambah Keranjang
+        </button>
+    </div>
+</div>
 
-                    <!-- Paket 3 -->
-                    <div class="bg-white rounded-2xl overflow-hidden border border-orange-100 shadow-lg">
-                        <div class="relative h-40 overflow-hidden">
-                            <img src="/images/paket3.webp" alt="Paket Hemat 3" class="w-full h-full object-cover">
-                            <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 20%</span>
-                        </div>
-                        <div class="p-5">
-                            <h4 class="font-bold text-lg text-coklat">Paket Hemat 3</h4>
-                            <p class="text-xs text-slate-500 mb-2">Untuk 6-8 Orang</p>
-                            <p class="text-2xl font-extrabold text-brand-600 mb-1">Rp250.000 <span class="text-sm font-normal text-slate-400 line-through">Rp310.000</span></p>
-                            <button onclick="addToCart('Paket Hemat 3 (6-8 Orang)', 250000)" class="w-full mt-3 bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
-                                + Tambah Keranjang
-                            </button>
-                        </div>
+<!-- Paket 3 -->
+<div class="bg-white rounded-2xl overflow-hidden border-orange-100 shadow-lg flex-col h-full">
+    <div class="relative h-40 overflow-hidden flex-shrink-0">
+        <img src="/images/paket3.webp" alt="Paket Hemat 3" class="w-full h-full object-cover">
+        <span class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full">Hemat 20%</span>
+    </div>
+    <div class="p-5 flex-col flex-1">
+        <h4 class="font-bold text-lg text-coklat">Paket Hemat 3</h4>
+        <p class="text-xs text-slate-500 mb-2">Untuk 6-8 Orang</p>
+        <p class="text-2xl font-extrabold text-brand-600 mb-1 flex-1">Rp250.000 <span class="text-sm font-normal text-slate-400 line-through">Rp310.000</span></p>
+        <button onclick="addToCart('Paket Hemat 3 (6-8 Orang)', 250000)" class="w-full mt-auto bg-brand-500 hover:bg-brand-600 text-white font-bold py-2 rounded-full text-sm">
+            + Tambah Keranjang
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- TESTIMONI -->
     <section id="testimoni" class="py-20 lg:py-28 bg-white">
